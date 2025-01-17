@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'HelvetiPixel';
+    src: url('HelvetiPixel.woff2') format('woff2'),
+        url('HelvetiPixel.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+::selection{
+	background: #707070;
+}
+
+html{
+	cursor:	url("assets/cursor.png"), auto;
+}
+
+body{
+	font-family: 'HelvetiPixel';
+	color: white;
+	background-image: url("assets/tilesquare.png");
+	background-color: #000000;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	background-position: center;
+	}
+
+a{
+	cursor:	url("assets/cursorclick.png"), auto;
+}
+
+.content {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0px 0px 0px 0px;
+	border-width: 0px;
+	background-color: black;
+	flex-direction: row;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.box {
+	box-sizing: border-box;
+	padding: 4px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	animation-name: blink;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes blink {
+  0%   {background-color: white;}
+  50%  {background-color: #C3C3C3;}
+  100% {background-color: white;}
+}
+
+.box, .content {
+	border-radius: 5px;
+}
+
+.clickable {
+	cursor:	url("assets/cursorclick.png"), auto;
+}
+
+.clickable:hover {
+	background-color: #222;
+}
+
+.clickable:active:hover {
+	background-color: #444;
+}
+
+.active {
+	background-color: #444;
+}
+
+.blog {
+  display: none;
+  overflow: hidden;
+}
+
+.scanlines {
+	position: fixed;
+	background-repeat: repeat;
+	background-image: url("assets/scan.png");
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	pointer-events: none;
+	background-attachment: fixed;
+}
+
+.arrow{
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+}
+
+body::-webkit-scrollbar{
+	width: 15px;
+	height: 15px;
+}
+
+body::-webkit-scrollbar-track{
+	background-color: black;
+	background-size: 30px;
+}	
+	
+body::-webkit-scrollbar-thumb{
+	background-color: #777777;
+	border-left: ridge 2px #E3E3E3;
+	border-top:	ridge 2px #E3E3E3;
+	border-right: ridge 2px #000;
+	border-bottom: ridge 2px #000;
+	border-radius: 4px;
+}
+
+body::-webkit-scrollbar-button:horizontal:end:increment,
+body::-webkit-scrollbar-button:horizontal:start:decrement,
+body::-webkit-scrollbar-button:vertical:end:increment,
+body::-webkit-scrollbar-button:vertical:start:decrement{
+	background-color: #777777;
+	border-left: ridge 2px #E3E3E3;
+	border-top:	ridge 2px #E3E3E3;
+	border-right: ridge 2px #000;
+	border-bottom: ridge 2px #000;
+	width: 15px;
+	height:	15px;
+	border-radius: 4px;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+}
+
+body::-webkit-scrollbar-button:horizontal:end:increment:active:hover,
+body::-webkit-scrollbar-button:horizontal:start:decrement:active:hover,
+body::-webkit-scrollbar-button:vertical:end:increment:active:hover,
+body::-webkit-scrollbar-button:vertical:start:decrement:active:hover{
+	background-color: #777777;
+	border:	solid 2px #777777;
+}
+	
+body::-webkit-scrollbar-button:vertical:end:increment{
+	background-image: url(assets/down.png);
+}
+
+body::-webkit-scrollbar-button:vertical:start:decrement{
+	background-image: url(assets/up.png);
+}
+
+body::-webkit-scrollbar-button:horizontal:end:increment{
+	background-image: url(assets/right.png);
+}
+	
+body::-webkit-scrollbar-button:horizontal:start:decrement{
+	background-image: url(assets/left.png);
+}	
+
+body::-webkit-scrollbar-corner{
+	background-color: black;
+}
